@@ -1,4 +1,4 @@
-#!/bin/sb
+#!/bin/sh
 
 npm install
 
