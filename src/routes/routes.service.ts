@@ -20,8 +20,8 @@ export class RoutesService {
     return this.routeModel.find().exec();
   }
 
-  findOne(id: number) {
-    return `This action returns a #${id} route`;
+  findOne(id: string) {
+    return this.routeModel.findById(id).exec();
   }
 
   update(id: number, updateRouteDto: UpdateRouteDto) {
