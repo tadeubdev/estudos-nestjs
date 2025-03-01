@@ -29,7 +29,7 @@ export class RoutesService {
     return this.routeModel.findById(id).exec();
   }
 
-  remove(id: number) {
-    return `This action removes a #${id} route`;
+  remove(id: string) {
+    return this.routeModel.findByIdAndDelete(id).exec();
   }
 }
