@@ -17,7 +17,7 @@ export class RoutesService {
   }
 
   findAll() {
-    return `This action returns all routes`;
+    return this.routeModel.find().exec();
   }
 
   findOne(id: number) {
