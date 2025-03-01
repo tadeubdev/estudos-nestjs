@@ -24,8 +24,9 @@ export class RoutesService {
     return this.routeModel.findById(id).exec();
   }
 
-  update(id: number, updateRouteDto: UpdateRouteDto) {
-    return `This action updates a #${id} route`;
+  async update(id: string, updateRouteDto: UpdateRouteDto) {
+    await this.routeModel.findByIdAndUpdate(id, updateRouteDto).exec();
+    return this.routeModel.findById(id).exec();
   }
 
   remove(id: number) {
