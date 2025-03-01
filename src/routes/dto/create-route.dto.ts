@@ -1,3 +1,10 @@
+interface PositionDto {
+  lat: number;
+  lng: number;
+}
+
 export class CreateRouteDto {
-  name: string;
+  title: string;
+  startPosition: PositionDto;
+  endPosition: PositionDto;
 }
